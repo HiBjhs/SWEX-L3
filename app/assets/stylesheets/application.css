@@ -13,28 +13,33 @@
  *= require_tree .
  *= require_self
  */
-/* ヘッダ部分 */
-#nav {
+ body {
+  background-color: #ffffff;
+}
+/* header */
+ #header{
     list-style: none;
     overflow: hidden;
   }
-  #nav li {
+  .nav-li {
     width: 140px;
     text-align: center;
-    background-color: #333;
+    background-color: rgb(124, 105, 105);
     float: left;
-    height: 50px;
-    line-height: 50px;
+    height: 30px;
+    line-height: 30px;
     margin-right: 2px;
   }
-  #nav li a {
+  .nav-li-a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
     padding: 10px;
   }
-  
-  /* 丸アイコン */
+  .nav-li:hover {
+    background-color: #ffc9d7;
+    }
+  /* icon */
   .trim {
     position:relative;
     overflow: hidden;
@@ -51,3 +56,15 @@
     -ms-transform: translate(-50%, -50%);
     height:100%;
   }
+
+  #sidebar {
+    display: block;
+    width: 30%;
+    height: 100px;
+}
+
+.sidebar-list-item {
+    list-style: none;
+    padding: 16px;
+    margin: 8px;
+}
