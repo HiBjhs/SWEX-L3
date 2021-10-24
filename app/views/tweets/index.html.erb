@@ -1,0 +1,20 @@
+<% if flash[:notice] %>
+    <span style="color:green;">
+        <%= flash[:notice] %>
+    </span>
+<% end %>
+
+<% @tweet.each do |e| %>
+     <div class="trim">
+        <img src="https://regeld.com/desi/wp-content/uploads/2020/04/200405_a_sic_06.png">
+    </div>
+    <p> 
+        <%= e.message %> 
+        <%= ((Time.current - e.tdate) / 60).to_i.to_s + "分前" %>
+        <%= link_to '表示', "/tweets/#{e.id}" %> 
+        <%= link_to '削除', "/tweets/#{e.id}", method: :delete %> 
+        <%= link_to '編集', "/tweets/#{e.id}/edit" %> 
+    </p> 
+<% end %>
+
+<%= link_to 'ツイートする', new_tweet_path %>
